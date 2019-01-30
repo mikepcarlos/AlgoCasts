@@ -8,6 +8,30 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-function reverseInt(n) {}
+// my solution
+
+function reverseInt(n) {
+  let result = null;
+  let newNum = n.toString()
+  let numString = '';
+
+  if (n < 0) {
+    for (let i = newNum.length - 1; i >= 0; i--){
+      let num = newNum.charAt(i);
+      numString += num
+    }
+    result = parseInt(numString.substring(0, numString.length - 1)) * -1
+    return result;
+  } else {
+    for (let i = newNum.length - 1; i >= 0; i--){
+      let num = newNum.charAt(i);
+      numString += num
+    }
+    result = parseInt(numString);
+    return result
+  }
+}
+
+reverseInt(-521)
 
 module.exports = reverseInt;
