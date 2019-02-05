@@ -32,6 +32,14 @@ function reverseInt(n) {
   }
 }
 
+// a lot cleaner solution
+
+function reverseInt(n){
+  const reversed = n.toString().split('').reverse().join('');
+
+  return parseInt(reversed) * Math.sign(n);
+}
+
 reverseInt(-521)
 
 module.exports = reverseInt;
